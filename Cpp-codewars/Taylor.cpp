@@ -31,9 +31,8 @@ double calculate_sin_of_x(double x)
 {
     int series_num = 6, integerPart = 0;
     double series_result = 0, sign = -1;
-
-    if(x >= M_PI || x <= M_PI)
-        x = x - (M_PI * (integerPart = find_integer_part(x, M_PI)));
+    
+    x = x - (M_PI * (integerPart = find_integer_part(x, M_PI)));
 
     for(size_t i = 3; series_num > 0; i += 2)
     {
